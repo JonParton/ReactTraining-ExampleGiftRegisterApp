@@ -15,7 +15,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import { useSetRecoilState } from "recoil";
 import { mobileMenuOpenState } from "./SideNav/SideNavAtom";
-import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,6 +1,6 @@
 # Example Gift Register App
 
-## Intro:
+## Intro
 
 The whole application development team at Laing O'Rourke did a 4 day react training course with Stuart from [StayAhead](https://www.stayahead.com/). The course was designed to bring the team up to a common foundation in developing using react as we were moving from an MVC pattern using C#.
 
@@ -8,15 +8,17 @@ Part of this course was creating an example front end application to handle most
 
 I couldn't help taking this a bit further then the training required so I'm sharing for others from the team and beyond to take a peak.
 
+Any comments or suggested improvements are very welcome; I've still got plenty to learn📚! either log an issue ‼, make a pull request 👨🏼‍💻 or drop me a message 📨.
+
 ## Example Deployment
 
 For ease of review this Github repo is also connected via a pipeline to an example deployment on netlify here:
 
-[Example Deployment on Netlify](https://jovial-minsky-e2015d.netlify.app/)
+[Example Deployment on Netlify](https://jovial-minsky-e2015d.netlify.app/) 🌐
 
 The intro to the app also explains the key features above the basics from the training.
 
-## Still Todo:
+## Still Todo ✅
 
 There are lots of extra things I would have liked to have done and may come back and tick some of these off in the future.
 

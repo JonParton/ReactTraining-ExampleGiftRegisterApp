@@ -1,0 +1,20 @@
+[
+    {
+        "giftID":1,
+        "date":"2020-11-30",
+        "donor":"Dan Armstrong",
+        "recipient":"Jon Parton", 
+        "value":120,
+        "currency":"GBP",
+        "description":"Gave a wonderfull gift becuase he loves JPs beard."
+    }, 
+    {
+        "giftID":2,
+        "date":"2020-12-02",
+        "donor":"Jon Parton",
+        "recipient":"Dan Armstrong", 
+        "value":0.10,
+        "currency":"GBP",
+        "description":"Gave a gift because Dan rocked the Gift Register Task."
+    }
+]

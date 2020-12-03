@@ -12,7 +12,7 @@ I couldn't help taking this a bit further then the training required so I'm shar
 
 For ease of review this Github repo is also connected via a pipeline to an example deployment on netlify here:
 
-[Example Deployment on Netlify]()
+[Example Deployment on Netlify](https://jovial-minsky-e2015d.netlify.app/)
 
 The intro to the app also explains the key features above the basics from the training.
 

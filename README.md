@@ -23,5 +23,5 @@ There are lots of extra things I would have liked to have done and may come back
 - Encountered an issue where it was very hard to get the `AddEditGiftDialog` component to correctly reset upon changing the gift to be edited and had to resort to forcing the component to drop from dom and be recreated by updating its key.
   - It would be good to change this to be clearable by a state change rather then this as it doesn't feel "correct" ...This may just be a quirk of the Formik UseFormik hook as it's hard to get it to reset correctly based on a state change due to scoping available in `useEffect`.
 - Make an improved search that is not manually tied into the shape of the Object.
-- There is a bug I have identified with the Modal Dialog deep linking where if a Dialog shows and you click away the back button will get you stook in a loop. I think I need to intercept the back button here. Needs some more investigation.
+- There is a bug I have identified with the Modal Dialog deep linking where if a Dialog shows and you click away the back button will get you stuck in a loop. I think I need to intercept the back button here. Needs some more investigation.
 - Make the currency display as it's label instead of the value stored in the DB.

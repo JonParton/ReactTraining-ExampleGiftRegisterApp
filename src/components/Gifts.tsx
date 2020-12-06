@@ -133,7 +133,7 @@ function Gifts() {
 
           setAddEditGiftDialogOpen(true);
         } else {
-          // By checking if the returned lsit of gifts have the ID we are also checking access.
+          // By checking if the returned list of gifts have the ID we are also checking access.
           // We are not checking if they have "Rights" however.
           const existingGiftArray = giftsArray.filter(
             (aGift) => aGift.giftID === giftID
@@ -153,7 +153,7 @@ function Gifts() {
               urlParts.pop();
               let nonEditURL = urlParts.join("/");
 
-              //Replace the history so they don't git the error again when hitting back.
+              //Replace the history so they don't get the error again when hitting back.
               history.replace(`${nonEditURL}`);
               enqueueSnackbar(
                 "We could not find the gift you are looking for",

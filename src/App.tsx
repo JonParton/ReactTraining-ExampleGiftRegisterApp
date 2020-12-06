@@ -16,12 +16,16 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
     flexGrow: 1,
     display: "flex",
+    width: "100%",
   },
   mainPaper: {
     padding: 24,
   },
   addEditArea: {
     marginTop: theme.spacing(2),
+  },
+  mainContentContainer: {
+    width: "100%",
   },
 }));
 
@@ -43,7 +47,7 @@ function App() {
             </Grid>
 
             {/* The main content */}
-            <Grid item md={12} lg={8}>
+            <Grid className={classes.mainContentContainer} item md={12} lg={8}>
               <Switch>
                 <Route exact path="/" component={Home} />
                 {/* NOTE: When you have multiple routes, they need to be in your 

@@ -1,4 +1,4 @@
-import { Box, Button, makeStyles, Paper, Typography } from "@material-ui/core";
+import { Box, Button, Grid, makeStyles, Paper, Typography } from "@material-ui/core";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import React, { useEffect, useState } from "react";
 import { useRecoilState, useSetRecoilState } from "recoil";
@@ -30,6 +30,13 @@ const useStyles = makeStyles((theme) => ({
   },
   addEditArea: {
     marginTop: theme.spacing(2),
+  },
+  clearLocalStorageButton: {
+    marginTop:10,
+    // Only float right when we are not in column mode!
+    [theme.breakpoints.up('md')]: {
+      float:"right",
+    },
   },
 }));
 
@@ -126,7 +133,7 @@ function Gifts() {
 
           setAddEditGiftDialogOpen(true);
         } else {
-          // By checking if the returned lsit of gifts have the ID we are also checking access.
+          // By checking if the returned list of gifts have the ID we are also checking access.
           // We are not checking if they have "Rights" however.
           const existingGiftArray = giftsArray.filter(
             (aGift) => aGift.giftID === giftID
@@ -146,7 +153,7 @@ function Gifts() {
               urlParts.pop();
               let nonEditURL = urlParts.join("/");
 
-              //Replace the history so they don't git the error again when hitting back.
+              //Replace the history so they don't get the error again when hitting back.
               history.replace(`${nonEditURL}`);
               enqueueSnackbar(
                 "We could not find the gift you are looking for",
@@ -187,22 +194,24 @@ function Gifts() {
   return (
     <React.Fragment>
       <Paper elevation={8} className={classes.mainPaper}>
-        <Box>
+        <Grid container>
+          <Grid item md={8} xs={12}>
           <Typography variant="h3" gutterBottom>
             Current Gifts Made
-            <Button
+            
+          </Typography>
+          </Grid>
+          <Grid item md={4} xs={12}>
+          <Button
+              className={classes.clearLocalStorageButton}
               variant="outlined"
               startIcon={<DeleteForeverIcon />}
               onClick={clearGiftsFromLocalStorage}
-              style={{
-                float: "right",
-                marginTop: 10,
-              }}
             >
               Clear LocalStorage
             </Button>
-          </Typography>
-        </Box>
+          </Grid>
+        </Grid>
         <hr />
         <Typography variant="h5" gutterBottom>
           List of current gifts in the system

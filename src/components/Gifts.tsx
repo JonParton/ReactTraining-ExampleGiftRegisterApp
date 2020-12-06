@@ -1,4 +1,4 @@
-import { Box, Button, makeStyles, Paper, Typography } from "@material-ui/core";
+import { Box, Button, Grid, makeStyles, Paper, Typography } from "@material-ui/core";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import React, { useEffect, useState } from "react";
 import { useRecoilState, useSetRecoilState } from "recoil";
@@ -30,6 +30,13 @@ const useStyles = makeStyles((theme) => ({
   },
   addEditArea: {
     marginTop: theme.spacing(2),
+  },
+  clearLocalStorageButton: {
+    marginTop:10,
+    // Only float right when we are not in column mode!
+    [theme.breakpoints.up('md')]: {
+      float:"right",
+    },
   },
 }));
 
@@ -187,22 +194,24 @@ function Gifts() {
   return (
     <React.Fragment>
       <Paper elevation={8} className={classes.mainPaper}>
-        <Box>
+        <Grid container>
+          <Grid item md={8} xs={12}>
           <Typography variant="h3" gutterBottom>
             Current Gifts Made
-            <Button
+            
+          </Typography>
+          </Grid>
+          <Grid item md={4} xs={12}>
+          <Button
+              className={classes.clearLocalStorageButton}
               variant="outlined"
               startIcon={<DeleteForeverIcon />}
               onClick={clearGiftsFromLocalStorage}
-              style={{
-                float: "right",
-                marginTop: 10,
-              }}
             >
               Clear LocalStorage
             </Button>
-          </Typography>
-        </Box>
+          </Grid>
+        </Grid>
         <hr />
         <Typography variant="h5" gutterBottom>
           List of current gifts in the system
